@@ -4,7 +4,8 @@ import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
 import com.qualcomm.robotcore.hardware.DcMotorSimple;
 import com.qualcomm.robotcore.hardware.ScannedDevices;
-@com.qualcomm.robotcore.eventloop.opmode.TeleOp(name = "лебедев жми сюда")    // Объявили TeleOp
+
+@com.qualcomm.robotcore.eventloop.opmode.TeleOp(name = "gamepad.Impuls")    // Объявили TeleOp
 public class TeleOp extends LinearOpMode{    // класс для создания переменных, функций и т.д.
     // переменный моторов
     DcMotor right_front;
