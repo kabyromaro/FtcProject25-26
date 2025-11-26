@@ -28,7 +28,7 @@ public class TeleOp extends LinearOpMode{    // класс для создани
         waitForStart();
         while(opModeIsActive()){
             // локальные переменные движения
-            double axial = -gamepad1.right_trigger+gamepad1.left_trigger;      // езда вперед - назад (по оси y)
+            double axial = -gamepad1.left_stick_y;      // езда вперед - назад (по оси y)
             double lateral = -gamepad1.left_stick_x;                           // езда влево - вправо (по оси x)
             double yaw = -gamepad1.right_stick_x;                              // поворот вокруг своей оси
 
