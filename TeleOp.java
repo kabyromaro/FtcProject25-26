@@ -2,8 +2,6 @@ package org.firstinspires.ftc.teamcode;
 
 import com.qualcomm.robotcore.eventloop.opmode.LinearOpMode;
 import com.qualcomm.robotcore.hardware.DcMotor;
-import com.qualcomm.robotcore.hardware.DcMotorSimple;
-import com.qualcomm.robotcore.hardware.ScannedDevices;
 
 @com.qualcomm.robotcore.eventloop.opmode.TeleOp(name = "gamepad.Impuls")    // Объявили TeleOp
 public class TeleOp extends LinearOpMode{    // класс для создания переменных, функций и т.д.
@@ -12,6 +10,7 @@ public class TeleOp extends LinearOpMode{    // класс для создани
     DcMotor left_front;
     DcMotor right_back;
     DcMotor left_back;
+    DcMotor bw;
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -28,10 +27,9 @@ public class TeleOp extends LinearOpMode{    // класс для создани
         waitForStart();
         while(opModeIsActive()){
             // локальные переменные движения
-            double axial = -gamepad1.left_stick_y;      // езда вперед - назад (по оси y)
+            double axial = gamepad1.left_stick_y;                            // езда вперед - назад (по оси y)
             double lateral = -gamepad1.left_stick_x;                           // езда влево - вправо (по оси x)
-            double yaw = -gamepad1.right_stick_x;                              // поворот вокруг своей оси
-
+            double yaw = -gamepad1.right_stick_x;// поворот вокруг своей ос
 
 
             // формировка мощности на каждый мотор (что бы все было равномерно)
