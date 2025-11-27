@@ -10,7 +10,6 @@ public class TeleOp extends LinearOpMode{    // класс для создани
     DcMotor left_front;
     DcMotor right_back;
     DcMotor left_back;
-    DcMotor bw;
 
     @Override
     public void runOpMode() throws InterruptedException {
