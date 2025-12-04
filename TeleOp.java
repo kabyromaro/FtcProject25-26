@@ -10,8 +10,8 @@ public class TeleOp extends LinearOpMode{    // класс для создани
     DcMotor left_front;
     DcMotor right_back;
     DcMotor left_back;
-    DcMotor fw; // захват c1
-    DcMotor bw; // шутер c2
+    DcMotor fw;   // захват с1
+    DcMotor bw;   // шутер с2
 
     @Override
     public void runOpMode() throws InterruptedException {
@@ -34,8 +34,8 @@ public class TeleOp extends LinearOpMode{    // класс для создани
             double axial = gamepad1.left_stick_y;                            // езда вперед - назад (по оси y)
             double lateral = -gamepad1.left_stick_x;                         // езда влево - вправо (по оси x)
             double yaw = -gamepad1.right_stick_x;                            // поворот вокруг своей оси
-            double fw_g = gamepad1.left_trigger;
-            double bw_g = gamepad1.right_trigger;
+            double fw_g = gamepad1.left_trigger;                             // захват
+            double bw_g = gamepad1.left_trigger;                             // шутер
 
 
             // формировка мощности на каждый мотор (что бы все было равномерно)
@@ -50,9 +50,9 @@ public class TeleOp extends LinearOpMode{    // класс для создани
             right_back.setPower(rbp);
             left_back.setPower(lbp);
 
-            // Устанавливаем мощность на захват и шутер
-            fw.setPower(fw_g);   // захват
-            bw.setPower(bw_g);   // шутер
+            // второстепенные детали (захват и шутер)
+            fw.setPower(fw_g);  // запуск мотора захвата
+            bw.setPower(bw_g);  // запусе мотора шутера
         }
     }
 }
